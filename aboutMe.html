@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Neucha&display=swap');
+			
+			body {
+				margin: 0;
+				background-color: rgb(239, 250, 254);
+			}
+			a {
+				text-decoration: none;
+			}
+			header {
+				background-color: rgb(2, 38, 54);
+				display: flex;
+			}
+			header #logo {
+				margin: 5px;
+				height: 90px;
+				/*background-color: darkGray;*/
+			}
+			nav {
+				display: flex;
+				width: 100%;
+				height: 30px;
+				margin-top: 57.5px;
+			}
+			nav a {
+				color: rgb(215, 223, 222);
+				padding-left: 30px;
+				width: 300px;
+				line-height: 30px;
+				font-size: 20px;
+			}
+	
+			main {
+				min-height: 565px;
+				display: flex;
+			}
+			#left {
+				width: 300px;
+				height: 525px;
+				margin: auto 0;
+				padding: 20px;
+				background-color: rgba(2, 38, 54, 0.4);
+			}
+			#left div {
+				margin: 50px 0;
+			}
+
+			#right {
+				width: 600px;
+				margin: auto;
+			}
+			#info {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			#info div {
+				width: 250px;
+				height: 130px;
+				border: 2px black solid;
+				margin: 30px auto;
+			}
+			#info div:nth-child(1) {
+				background-image: url("images/bg-flowers.jpg");
+				background-color: rgba(255, 255, 255, 0.5);
+				background-blend-mode: soft-light;
+			}
+			#info div:nth-child(1) h2{
+				margin-top: 30px;
+				text-align: center;
+				font-size: 30px;
+			}
+			#info div:nth-child(n+2) h2{
+				margin-top: -15px;
+				margin-left: 10px;
+				width: fit-content;
+				background-color: rgb(239, 250, 254);
+			}
+
+			h1{
+				text-align: center;
+			}
+
+			
+			footer {
+				background-color: rgb(2, 38, 54);
+				display: flex;
+				padding: 0 10px;
+			}
+			footer span, footer #coddy {
+				width: 400px;
+				line-height: 30px;
+				color: rgb(215, 223, 222);
+			}
+			footer #coddy {
+				text-decoration: none;
+				text-align: right;
+				width: 100%;
+			}
+			footer div {
+				display: flex;
+			}
+			footer div img {
+				margin-top: 2.5px;
+				width: 22.5px;
+				height: 22.5px;
+			}
+		</style>
+	</head>
+	<body>
+		
+			<header>
+				<img id="logo" src="images/logo.png" alt="CODDY logo">
+				<nav>
+					<a href="index.html">Главная</a>
+					<a href="aboutMe.html">Обо мне</a>
+					<a href="myWorks.html">Портфолио</a>
+				</nav>
+			</header>
+			<main>
+				<div id="left">
+					<div>
+						<h3>Контакты</h3>
+						<p>Тел.: +7 (000) 000-00-00</p>
+						<p>Почта: web.designer@gmail.com</p>
+					</div>
+					<div>
+						<h3>Персональное</h3>
+						<p>город Новороссийск</p>
+						<p>Языки: Русский, Английский</p>
+					</div>
+					<div>
+						<h3>Интересы</h3>
+						<p>WEB-дизайн</p>
+						<p>WEB-разработка</p>
+						<p>Графический дизайн</p>
+					</div>
+				</div>
+				<div id="right">
+					<h1>Анастасия Язвинская</h1>
+					<div id="info">
+						<div id="h2">
+							<h2>Начинающий<br>Web-дизайнер</h2>
+						</div>
+						<div>
+							<h2>Услуги</h2>
+							<ul>
+								<li>Лэндинг</li>
+								<li>Сайт-визитка</li>
+								<li>Промо-сайт</li>
+								<li>Имиджевый сайт</li>
+								<li>Персональный сайт</li>
+							</ul>
+						</div>
+						<div>
+							<h2>Навыки</h2>
+							<ul>
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>JS</li>
+							</ul>
+						</div>
+						<div>
+							<h2>Квалификация</h2>
+							<ul>
+								<li>CODDY: WEB-мастеринг</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</main>
+		
+		<footer>
+			<span>&copy 2023 - Анастасия Язвинская</span>
+			<div id="socials">
+				<a href="#"><img src="images/git.png" alt="GitHub link image"></a>
+			</div>
+			<a id="coddy" href="#">Школа программирования и дизайна CODDY</a>
+		</footer>
+	</body>
+</html>

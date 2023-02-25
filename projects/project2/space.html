@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Puzzle</title>
+		<style>
+			body {
+				background-color: Tan;
+				margin: 0;
+			}
+			header {
+				background-color: rgb(5, 23, 38);
+				display: flex;
+				color: white;
+			}
+			header img {
+				width: 140px;
+				height: 140px;
+				margin-top: 4px;
+			}
+			header div {
+				width: 100%;
+				margin-left: 20px;
+			}
+			h4 {
+				margin-top: -20px;
+				margin-bottom: 40px;
+			}
+			nav {
+				width: 100%;
+				display: flex;
+				background-color: lightSteelBlue;
+			}
+			nav a {
+				color: black;
+				text-decoration: none;
+				width: 100%;
+				text-align: center;
+				line-height: 30px;
+				font-size: 20px;
+			}
+			nav a:hover {
+				background-color: steelBlue;
+			}
+			nav a#active {
+				background-color: rgb(5, 23, 38);
+				color: white;
+			}
+
+			main {
+				margin: 15px 20px;
+				position: relative;
+			}
+			#field {
+				margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				width: 800px;
+				height: 480px;
+				background-image: url("./images/pic1/base.jpg");
+				border: 5px black solid;
+			}
+			#field div {
+				width: 160px;
+				height: 160px;
+				background-color: rgba(255, 255, 255,0.8);
+			}
+			#field div img {
+				width: 160px;
+			}
+			#parts img {
+				width: 100px;
+				position: absolute;
+			}
+			#parts img:active {
+				width: 160px;
+				transform: none;
+			}
+			/**/
+			#parts .left0 {
+				left: 130px;
+			}
+			#parts .left1 {
+				left: 1200px;
+			}
+			#parts .left2 {
+				left: 1080px;
+			}
+			#parts .left3 {
+				left: 10px;
+			}
+			/**/
+			#parts .top0 {
+				top: 10px;
+			}
+			#parts .top1 {
+				top: 230px;
+			}
+			#parts .top2 {
+				top: 340px;
+			}
+			#parts .top3 {
+				top: 120px;
+			}
+			/**/
+			#parts .rotate0 {
+				transform: rotate(10deg);
+			}
+			#parts .rotate1 {
+				transform: rotate(50deg);
+			}
+			#parts .rotate2 {
+				transform: rotate(30deg);
+			}
+			#parts .rotate3 {
+				transform: rotate(70deg);
+			}
+			#parts .rotate0:active, #parts .rotate1:active, #parts .rotate2:active, #parts .rotate3:active {
+				transform: none;
+			}
+		</style>
+		<script>
+			function allowDrop(ev) {
+			  ev.preventDefault();
+			}
+
+			function drag(ev) {
+			  ev.dataTransfer.setData("text", ev.target.id);
+			}
+
+			function drop(ev) {
+			  ev.preventDefault();
+			  var data = ev.dataTransfer.getData("text");
+			  ev.target.appendChild(document.getElementById(data));
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="./images/logo.jpg" alt="Logo">
+			<div>
+				<h1>PuzzlePause</h1>
+				<h4>Легких путей не ищем!</h4>
+				<nav>
+					<a href="space.html" id="active">Космос</a>
+					<a href="flowers.html">Цветы</a>
+				</nav>
+			</div>
+		</header>
+		
+		<main>
+			<div id="field">
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			</div>
+			<div id="parts">
+				<img src="./images/pic1/part1.jpg" alt="Part 1" draggable="true" ondragstart="drag(event)" id="drag1" class="rotate0 top0 left0">
+				<img src="./images/pic1/part2.jpg" alt="Part 2" draggable="true" ondragstart="drag(event)" id="drag2" class="rotate1 top1 left1">
+				<img src="./images/pic1/part3.jpg" alt="Part 3" draggable="true" ondragstart="drag(event)" id="drag3" class="rotate2 top2 left2">
+				<img src="./images/pic1/part4.jpg" alt="Part 4" draggable="true" ondragstart="drag(event)" id="drag4" class="rotate3 top3 left3">
+				<img src="./images/pic1/part5.jpg" alt="Part 5" draggable="true" ondragstart="drag(event)" id="drag5" class="rotate1 top3 left0">
+				<img src="./images/pic1/part6.jpg" alt="Part 6" draggable="true" ondragstart="drag(event)" id="drag6" class="rotate2 top0 left1">
+				<img src="./images/pic1/part7.jpg" alt="Part 7" draggable="true" ondragstart="drag(event)" id="drag7" class="rotate3 top1 left2">
+				<img src="./images/pic1/part8.jpg" alt="Part 8" draggable="true" ondragstart="drag(event)" id="drag8" class="rotate0 top2 left3">
+				<img src="./images/pic1/part9.jpg" alt="Part 9" draggable="true" ondragstart="drag(event)" id="drag9" class="rotate2 top2 left0">
+				<img src="./images/pic1/part10.jpg" alt="Part 10" draggable="true" ondragstart="drag(event)" id="drag10" class="rotate3 top3 left1">
+				<img src="./images/pic1/part11.jpg" alt="Part 11" draggable="true" ondragstart="drag(event)" id="drag11" class="rotate0 top0 left2">
+				<img src="./images/pic1/part12.jpg" alt="Part 12" draggable="true" ondragstart="drag(event)" id="drag12" class="rotate1 top1 left3">
+				<img src="./images/pic1/part13.jpg" alt="Part 13" draggable="true" ondragstart="drag(event)" id="drag13" class="rotate3 top1 left0">
+				<img src="./images/pic1/part14.jpg" alt="Part 14" draggable="true" ondragstart="drag(event)" id="drag14" class="rotate0 top2 left1">
+				<img src="./images/pic1/part15.jpg" alt="Part 15" draggable="true" ondragstart="drag(event)" id="drag15" class="rotate1 top3 left2">
+			</div>
+			<p id="test"></p>
+		</main>
+	</body>
+</html>

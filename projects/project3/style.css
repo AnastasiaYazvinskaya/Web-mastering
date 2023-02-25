@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Ruslan+Display&family=Yanone+Kaffeesatz&display=swap');
+
+body {
+margin: 0;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+background-color: rgb(3,1,10);
+}
+h1, h2, h3 {
+	font-family: 'Ruslan Display', cursive;
+}
+
+header {
+display: flex;
+height: 75px;
+background-color: rgba(199, 233, 225, 0.8);
+}
+header h1 {
+margin-left: 20px;
+}
+header button {
+border-color: rgb(202,97,34);
+background-color: rgba(199, 233, 225, 0.4);
+color: rgb(202,97,34);
+margin-left: 900px;
+height: 35px;
+width: 150px;
+margin-top: 20px;
+font-weight: bold;
+
+}
+
+/*main*/
+
+#promo {
+background-color: rgb(3,1,10);
+background-image: url("images/promo_img.jpg");
+background-repeat: no-repeat;
+height: 400px;
+display: flex;
+}
+#promo div {
+margin: auto;
+}
+#promo div:nth-child(1) {
+width: 800px;
+}
+#promo h1, #promo h3 {
+margin-left: 200px;
+text-align: center;
+text-shadow: 0 0 5px rgb(13, 255, 246), 0 0 10px rgb(13, 255, 246);
+}
+#promo h1 {
+font-size: 50px;
+text-shadow: 0 0 5px rgb(13, 255, 246), 0 0 10px rgb(13, 255, 246), 0 0 20px rgb(13, 255, 246), 0 0 30px rgb(13, 255, 246);
+font-family: 'Rubik Bubbles', cursive;
+}
+#promo div:nth-child(2) {
+display: flex;
+flex-direction: column;
+color: white;
+}
+#promo label, #promo button {
+margin-top: 10px;
+}
+
+#how-it-works {
+text-align: center;
+background-color: rgba(255,255,255,0.8);
+padding-top: 10px;
+}
+#points {
+display: flex;
+}
+#points div {
+width: 300px;
+margin: auto;
+}
+#points div span {
+display: flex;
+width: 100px;
+margin: 0 auto;
+font-size: 30px;
+}
+#points hr {
+width: 30px;
+background-color: rgb(3,1,10);
+height: 3px;
+border: none;
+}
+#points p {
+height: 100px;
+}
+
+#pictures {
+display: flex;
+padding: 20px 150px;
+background-color: rgba(199, 233, 225, 0.8);
+}
+#pictures img {
+width: 188px;
+height: 250px;
+margin: auto;
+border-radius: 10px;
+box-shadow: 0 0 20px rgb(3,1,10);
+}
+
+footer {
+background-color: black;
+color: lightGray;
+display: flex;
+height: 100px;
+width: 100%;
+}
+#copyright {
+width: 50%;
+margin: auto 0;
+}
+#copyright p {
+margin: 5px;
+}
+#subscribe {
+width: 40%;
+}
+#socials {
+width: 80px;
+height: 80px;
+margin-top: 10px;
+display: flex;
+flex-wrap: wrap;
+}
+#socials img {
+width: 35px;
+margin: auto;
+}
+
+#subscribe button, #promo button {
+border: none;
+background-color: rgb(222, 117, 57);
+height: 21px;
+border-radius: 3px;
+}
+
